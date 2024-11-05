@@ -28,14 +28,14 @@ function processJSONFiles(file1, file2) {
         const rawData2 = fs.readFileSync(file2, 'utf8');
 
         // Log raw data for troubleshooting
-        console.log('Raw data from test_case_1.json:', rawData1);
-        console.log('Raw data from test_case_2.json:', rawData2);
+        console.log('Raw data from testcase1.json:', rawData1);
+        console.log('Raw data from testcase2.json:', rawData2);
 
         const data1 = JSON.parse(rawData1);
         const data2 = JSON.parse(rawData2);
 
-        console.log('Data from test_case_1.json:', data1);
-        console.log('Data from test_case_2.json:', data2);
+        console.log('Data from testcase1.json:', data1);
+        console.log('Data from testcase2.json:', data2);
 
         // Process first JSON data
         const roots1 = [];
@@ -62,8 +62,8 @@ function processJSONFiles(file1, file2) {
         }
 
         // Output the results
-        console.log('Roots from test_case_1.json:', roots1);
-        console.log('Roots from test_case_2.json:', roots2);
+        console.log('Roots from testcase1.json:', roots1);
+        console.log('Roots from testcase2.json:', roots2);
 
     } catch (err) {
         console.error('Error reading or parsing JSON files:', err.message);
@@ -76,8 +76,8 @@ function processJSONFiles(file1, file2) {
 }
 
 // Define file paths
-const filePath1 = path.join(__dirname, 'test_case_1.json');
-const filePath2 = path.join(__dirname, 'test_case_2.json');
+const filePath1 = path.join(__dirname, 'testcase1.json');
+const filePath2 = path.join(__dirname, 'testcase2.json');
 
 // Call the function with the specified file paths
 processJSONFiles(filePath1, filePath2);
